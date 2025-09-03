@@ -46,11 +46,11 @@ export default function page() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <button 
-                onClick={() => scrollToSection('menu')}
+                onClick={() => scrollToSection('reviews')}
                 className="bg-gradient-to-r from-amber-600 to-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transform transition-all duration-300 group"
               >
-                Ver Menu Especial
-                <span className="inline-block ml-2 group-hover:rotate-12 transition-transform">🍽️</span>
+                Ver Testemunhos
+                <span className="inline-block ml-2 group-hover:rotate-12 transition-transform">💬</span>
               </button>
               
               <button 
