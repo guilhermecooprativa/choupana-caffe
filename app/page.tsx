@@ -22,10 +22,46 @@ export default function page() {
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="Café acolhedor com ambiente moderno"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-amber-900/70 via-orange-800/60 to-red-900/70"></div>
+        </div>
+        
+        {/* Floating Coffee Elements */}
+        <div className="absolute inset-0 opacity-30">
           <div className="absolute top-20 left-20 w-32 h-32 bg-amber-300 rounded-full animate-pulse"></div>
           <div className="absolute top-40 right-32 w-24 h-24 bg-orange-300 rounded-full animate-bounce"></div>
           <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-red-300 rounded-full animate-ping"></div>
+          
+          {/* Coffee Cup Images */}
+          <div className="absolute top-32 right-20 w-16 h-16 opacity-60 animate-float">
+            <img 
+              src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+              alt="Café quente"
+              className="w-full h-full object-cover rounded-full shadow-lg"
+            />
+          </div>
+          
+          <div className="absolute bottom-40 right-1/3 w-12 h-12 opacity-50 animate-float-delayed">
+            <img 
+              src="https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+              alt="Café expresso"
+              className="w-full h-full object-cover rounded-full shadow-lg"
+            />
+          </div>
+          
+          <div className="absolute top-1/2 left-10 w-14 h-14 opacity-40 animate-float-slow">
+            <img 
+              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+              alt="Café latte"
+              className="w-full h-full object-cover rounded-full shadow-lg"
+            />
+          </div>
         </div>
         
         <div className="container mx-auto px-6 text-center z-10">
@@ -79,6 +115,61 @@ export default function page() {
           onClick={() => scrollToSection('reviews')}
         >
           <ChevronDown />
+        </div>
+      </section>
+
+      {/* Food Gallery Section */}
+      <section className="py-16 bg-gradient-to-r from-amber-50 to-orange-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-bold text-gray-800 mb-4">
+              Os Nossos Favoritos 🍽️
+            </h3>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Descobre os pratos que fazem os nossos clientes voltarem sempre
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
+              <img 
+                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Panquecas deliciosas com frutas"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <h4 className="text-xl font-bold">Panquecas Artesanais</h4>
+                <p className="text-sm opacity-90">Com frutas frescas e mel</p>
+              </div>
+            </div>
+            
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
+              <img 
+                src="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Avocado toast com ovos"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <h4 className="text-xl font-bold">Avocado Toast</h4>
+                <p className="text-sm opacity-90">Com ovos poché e sementes</p>
+              </div>
+            </div>
+            
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
+              <img 
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Café especial e pastelaria"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <h4 className="text-xl font-bold">Café Especial</h4>
+                <p className="text-sm opacity-90">Grãos selecionados e pastelaria</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -182,17 +273,58 @@ export default function page() {
             </div>
             
             <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-amber-200 to-orange-300 rounded-3xl relative overflow-hidden shadow-2xl">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-8xl animate-pulse">☕</div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <div className="relative overflow-hidden rounded-2xl shadow-lg">
+                    <img 
+                      src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                      alt="Interior acolhedor do café"
+                      className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div className="absolute bottom-3 left-3 text-white text-sm font-semibold">
+                      Ambiente Acolhedor
+                    </div>
+                  </div>
+                  
+                  <div className="relative overflow-hidden rounded-2xl shadow-lg">
+                    <img 
+                      src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                      alt="Equipa do café preparando café"
+                      className="w-full h-32 object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div className="absolute bottom-2 left-2 text-white text-xs font-semibold">
+                      Equipa Dedicada
+                    </div>
+                  </div>
                 </div>
-                <div className="absolute top-4 right-4 w-16 h-16 bg-white/30 rounded-full animate-pulse flex items-center justify-center">
-                  <span className="text-2xl">✨</span>
+                
+                <div className="space-y-4">
+                  <div className="relative overflow-hidden rounded-2xl shadow-lg">
+                    <img 
+                      src="https://images.unsplash.com/photo-1442512400268-3c2bdc4b3d85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                      alt="Café artesanal sendo preparado"
+                      className="w-full h-32 object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div className="absolute bottom-2 left-2 text-white text-xs font-semibold">
+                      Café Artesanal
+                    </div>
+                  </div>
+                  
+                  <div className="relative overflow-hidden rounded-2xl shadow-lg">
+                    <img 
+                      src="https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                      alt="Clientes desfrutando do café"
+                      className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div className="absolute bottom-3 left-3 text-white text-sm font-semibold">
+                      Momentos Especiais
+                    </div>
+                  </div>
                 </div>
-                <div className="absolute bottom-6 left-6 w-12 h-12 bg-white/40 rounded-full animate-bounce flex items-center justify-center">
-                  <span className="text-xl">🌟</span>
-                </div>
-                <div className="absolute top-1/2 left-4 w-8 h-8 bg-white/20 rounded-full animate-ping"></div>
               </div>
             </div>
           </div>
@@ -213,8 +345,47 @@ export default function page() {
           }
         }
         
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-20px) rotate(5deg);
+          }
+        }
+        
+        @keyframes float-delayed {
+          0%, 100% {
+            transform: translateY(0px) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-15px) rotate(-3deg);
+          }
+        }
+        
+        @keyframes float-slow {
+          0%, 100% {
+            transform: translateY(0px) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-10px) rotate(2deg);
+          }
+        }
+        
         .animate-fade-in-up {
           animation: fade-in-up 1s ease-out;
+        }
+        
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+        
+        .animate-float-delayed {
+          animation: float-delayed 8s ease-in-out infinite;
+        }
+        
+        .animate-float-slow {
+          animation: float-slow 10s ease-in-out infinite;
         }
         
         .shadow-3xl {
