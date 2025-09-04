@@ -37,7 +37,10 @@ const Marquee = ({
         className={`flex min-w-full gap-4`}
         style={{
           transform: `translateX(${direction === "left" ? "-" : ""}${isPaused ? contentWidth / 4 : 0}px)`,
-          animation: `scroll-${direction} ${contentWidth / speed}s linear infinite`,
+          animationName: `scroll-${direction}`,
+          animationDuration: `${contentWidth / speed}s`,
+          animationTimingFunction: 'linear',
+          animationIterationCount: 'infinite',
           animationPlayState: isPaused ? "paused" : "running",
         }}
       >
