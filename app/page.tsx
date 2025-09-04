@@ -6,6 +6,10 @@ import Footer from '../components/Footer/Footer';
 import Marquee from '../components/Marquee';
 import ReviewCard from '../components/ReviewCard';
 import InteractiveCard from '../components/InteractiveCard';
+import LiquidBackground from '../components/LiquidBackground';
+import WaveBackground from '../components/WaveBackground';
+import MorphingBackground from '../components/MorphingBackground';
+import WaveSeparator from '../components/WaveSeparator';
 
 export default function page() {
   const scrollToSection = (sectionId: string) => {
@@ -20,11 +24,16 @@ export default function page() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-red-50">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 relative">
+      {/* Liquid Background Effects */}
+      <LiquidBackground />
+      <WaveBackground />
+      <MorphingBackground />
+      
       <Header />
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden z-10">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
@@ -126,14 +135,21 @@ export default function page() {
         </div>
       </section>
 
+      {/* Wave Separator */}
+      <WaveSeparator 
+        topColor="#fefce8" 
+        bottomColor="#92400e" 
+        className="relative z-10"
+      />
+
       {/* Food Gallery Section */}
-      <section className="py-16 bg-gradient-to-r from-amber-50 to-orange-50">
+      <section className="py-16 bg-gradient-to-r from-amber-800 to-orange-900 relative z-10">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold text-gray-800 mb-4">
+            <h3 className="text-4xl font-bold text-white mb-4">
               Os Nossos Favoritos 🍽️
             </h3>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-amber-100 max-w-2xl mx-auto">
               Descobre os pratos que fazem os nossos clientes voltarem sempre
             </p>
           </div>
@@ -164,13 +180,13 @@ export default function page() {
       </section>
 
       {/* Reviews Section */}
-      <section id="reviews" className="py-20 bg-gradient-to-r from-amber-50 to-orange-50">
+      <section id="reviews" className="py-20 bg-gradient-to-r from-amber-900 to-orange-900 relative z-10">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h3 className="text-5xl font-bold text-gray-800 mb-4">
+            <h3 className="text-5xl font-bold text-white mb-4">
               O que dizem os nossos clientes ⭐⭐⭐⭐⭐
             </h3>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-amber-100 max-w-2xl mx-auto">
               Testemunhos reais do TripAdvisor, só as melhores experiências.
             </p>
           </div>
@@ -178,8 +194,8 @@ export default function page() {
           <div className="space-y-8">
             <div className="relative">
               {/* Gradient overlays for smooth fade effect */}
-              <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-amber-50 to-transparent z-10 pointer-events-none"></div>
-              <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-amber-50 to-transparent z-10 pointer-events-none"></div>
+              <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-amber-900 to-transparent z-10 pointer-events-none"></div>
+              <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-amber-900 to-transparent z-10 pointer-events-none"></div>
               
               <Marquee direction="left" className="py-4" speed={30}>
               {[
@@ -256,37 +272,37 @@ export default function page() {
       </section>
 
       {/* About Section */}
-      <section id="sobre" className="py-20 bg-gradient-to-r from-amber-100 to-orange-100">
+      <section id="sobre" className="py-20 bg-gradient-to-r from-amber-800 to-orange-900 relative z-10">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h3 className="text-5xl font-bold text-gray-800">
+              <h3 className="text-5xl font-bold text-white">
                 A Nossa História
               </h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-amber-100 leading-relaxed">
                 Nascemos da paixão por criar momentos especiais através da gastronomia. 
                 Na Choupana Caffe, cada receita conta uma história, cada ingrediente é 
                 escolhido a dedo, e cada cliente é tratado como família.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-amber-100 leading-relaxed">
                 Desde 2020 que servimos os melhores pequenos-almoços e brunches da cidade, 
                 sempre com um sorriso e a garantia de qualidade que nos define.
               </p>
               <div className="grid grid-cols-3 gap-4 pt-8">
-                <div className="text-center p-4 bg-white/50 rounded-2xl">
+                <div className="text-center p-4 bg-white/20 rounded-2xl backdrop-blur-sm">
                   <div className="text-3xl mb-2">👥</div>
-                  <div className="text-3xl font-bold text-amber-600">1000+</div>
-                  <div className="text-gray-600 text-sm">Clientes Felizes</div>
+                  <div className="text-3xl font-bold text-amber-300">1000+</div>
+                  <div className="text-amber-200 text-sm">Clientes Felizes</div>
                 </div>
-                <div className="text-center p-4 bg-white/50 rounded-2xl">
+                <div className="text-center p-4 bg-white/20 rounded-2xl backdrop-blur-sm">
                   <div className="text-3xl mb-2">🍽️</div>
-                  <div className="text-3xl font-bold text-amber-600">50+</div>
-                  <div className="text-gray-600 text-sm">Especialidades</div>
+                  <div className="text-3xl font-bold text-amber-300">50+</div>
+                  <div className="text-amber-200 text-sm">Especialidades</div>
                 </div>
-                <div className="text-center p-4 bg-white/50 rounded-2xl">
+                <div className="text-center p-4 bg-white/20 rounded-2xl backdrop-blur-sm">
                   <div className="text-3xl mb-2">❤️</div>
-                  <div className="text-3xl font-bold text-amber-600">4</div>
-                  <div className="text-gray-600 text-sm">Anos de Paixão</div>
+                  <div className="text-3xl font-bold text-amber-300">4</div>
+                  <div className="text-amber-200 text-sm">Anos de Paixão</div>
                 </div>
               </div>
             </div>
