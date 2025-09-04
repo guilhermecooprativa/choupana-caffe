@@ -5,6 +5,7 @@ import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Marquee from '../components/Marquee';
 import ReviewCard from '../components/ReviewCard';
+import InteractiveCard from '../components/InteractiveCard';
 
 export default function page() {
   const scrollToSection = (sectionId: string) => {
@@ -128,7 +129,7 @@ export default function page() {
       {/* Food Gallery Section */}
       <section className="py-16 bg-gradient-to-r from-amber-50 to-orange-50">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h3 className="text-4xl font-bold text-gray-800 mb-4">
               Os Nossos Favoritos 🍽️
             </h3>
@@ -137,45 +138,27 @@ export default function page() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
-              <img 
-                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                alt="Panquecas deliciosas com frutas"
-                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 text-white">
-                <h4 className="text-xl font-bold">Panquecas Artesanais</h4>
-                <p className="text-sm opacity-90">Com frutas frescas e mel</p>
-              </div>
-            </div>
+          <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
+            <InteractiveCard
+              title="Panquecas Artesanais"
+              subtitle="Com frutas frescas e mel"
+              image="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Panquecas deliciosas com frutas"
+            />
             
-            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
-              <img 
-                src="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                alt="Avocado toast com ovos"
-                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 text-white">
-                <h4 className="text-xl font-bold">Avocado Toast</h4>
-                <p className="text-sm opacity-90">Com ovos poché e sementes</p>
-              </div>
-            </div>
+            <InteractiveCard
+              title="Avocado Toast"
+              subtitle="Com ovos poché e sementes"
+              image="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Avocado toast com ovos"
+            />
             
-            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
-              <img 
-                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                alt="Café especial e pastelaria"
-                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 text-white">
-                <h4 className="text-xl font-bold">Café Especial</h4>
-                <p className="text-sm opacity-90">Grãos selecionados e pastelaria</p>
-              </div>
-            </div>
+            <InteractiveCard
+              title="Café Especial"
+              subtitle="Grãos selecionados e pastelaria"
+              image="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Café especial e pastelaria"
+            />
           </div>
         </div>
       </section>
