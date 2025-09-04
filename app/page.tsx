@@ -3,6 +3,8 @@
 import React from 'react';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
+import Marquee from '../components/Marquee';
+import ReviewCard from '../components/ReviewCard';
 
 export default function page() {
   const scrollToSection = (sectionId: string) => {
@@ -66,24 +68,27 @@ export default function page() {
         
         <div className="container mx-auto px-6 text-center z-10">
           <div className="animate-fade-in-up">
-            <h2 className="text-7xl md:text-8xl font-black mb-6 bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 bg-clip-text text-transparent leading-tight">
-              Choupana Caffe
-              <br />
-              <span className="relative">
-                Sentidos
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-amber-400 rounded-full animate-bounce"></div>
-              </span>
-            </h2>
-            
-            <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Descobre o paraíso do pequeno-almoço e brunch na <span className="font-semibold text-amber-700">Choupana Caffe</span>. 
-              Sabores únicos que transformam cada manhã numa experiência inesquecível.
-            </p>
+            {/* Text Background for Better Readability */}
+            <div className="bg-black/40 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-8 max-w-5xl mx-auto animate-fade-in-up-delayed shadow-2xl">
+              <h2 className="text-7xl md:text-8xl font-black mb-6 bg-gradient-to-r from-amber-300 via-orange-300 to-red-300 bg-clip-text text-transparent leading-tight drop-shadow-2xl">
+                Choupana Caffe
+                <br />
+                <span className="relative">
+                  Sentidos
+                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-amber-400 rounded-full animate-bounce"></div>
+                </span>
+              </h2>
+              
+              <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
+                Descobre o paraíso do pequeno-almoço e brunch na <span className="font-semibold text-amber-300">Choupana Caffe</span>. 
+                Sabores únicos que transformam cada manhã numa experiência inesquecível.
+              </p>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <button 
                 onClick={() => scrollToSection('reviews')}
-                className="bg-gradient-to-r from-amber-600 to-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transform transition-all duration-300 group"
+                className="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transform transition-all duration-300 group shadow-lg"
               >
                 Ver Testemunhos
                 <span className="inline-block ml-2 group-hover:rotate-12 transition-transform">💬</span>
@@ -91,20 +96,22 @@ export default function page() {
               
               <button 
                 onClick={() => scrollToSection('contacto')}
-                className="border-2 border-amber-600 text-amber-700 px-8 py-4 rounded-full text-lg font-semibold hover:bg-amber-50 hover:shadow-lg transform transition-all duration-300"
+                className="bg-white/90 backdrop-blur-sm border-2 border-amber-500 text-amber-700 px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:shadow-lg transform transition-all duration-300 shadow-lg"
               >
                 Reservar Mesa
               </button>
             </div>
             
-            <div className="flex justify-center items-center space-x-8 text-sm text-gray-600">
-              <div className="flex items-center space-x-2">
-                <span className="text-amber-600">🕰️</span>
-                <span>Aberto 7h-15h</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-amber-600">⭐</span>
-                <span>4.9/5 avaliação</span>
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl px-8 py-4 max-w-md mx-auto">
+              <div className="flex justify-center items-center space-x-8 text-sm text-gray-700">
+                <div className="flex items-center space-x-2">
+                  <span className="text-amber-600">🕰️</span>
+                  <span className="font-semibold">Aberto 7h-15h</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <span className="text-amber-600">⭐</span>
+                  <span className="font-semibold">4.9/5 avaliação</span>
+                </div>
               </div>
             </div>
           </div>
@@ -174,7 +181,7 @@ export default function page() {
       </section>
 
       {/* Reviews Section */}
-      <section id="reviews" className="py-20 bg-white/80 backdrop-blur-sm">
+      <section id="reviews" className="py-20 bg-gradient-to-r from-amber-50 to-orange-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h3 className="text-5xl font-bold text-gray-800 mb-4">
@@ -185,53 +192,82 @@ export default function page() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                name: "Ana M.",
-                comment: "Simplesmente maravilhoso! O melhor brunch que já tive em Lisboa. Tudo fresco e delicioso.",
-                date: "Março 2024",
-              },
-              {
-                name: "João F.",
-                comment: "Ambiente acolhedor e staff super simpático. Recomendo vivamente a avocado toast!",
-                date: "Fevereiro 2024",
-              },
-              {
-                name: "Carla R.",
-                comment: "As panquecas são divinais e o café é top. Voltarei sempre que puder!",
-                date: "Janeiro 2024",
-              },
-              {
-                name: "Miguel T.",
-                comment: "Local perfeito para começar o dia. Experiência inesquecível!",
-                date: "Dezembro 2023",
-              },
-              {
-                name: "Sara L.",
-                comment: "Melhor pequeno-almoço da cidade. A qualidade é excecional e o serviço impecável.",
-                date: "Novembro 2023",
-              },
-              {
-                name: "Pedro A.",
-                comment: "Espaço bonito, staff simpático e comida deliciosa. Nota máxima!",
-                date: "Outubro 2023",
-              },
-            ].map((review, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-3xl p-8 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-500"
-              >
-                <div className="flex items-center mb-4 space-x-2">
-                  <span className="text-amber-600 text-lg">⭐️⭐️⭐️⭐️⭐️</span>
-                </div>
-                <p className="text-gray-700 italic mb-4 leading-relaxed">“{review.comment}”</p>
-                <div className="text-sm text-gray-500 flex justify-between items-center">
-                  <span className="font-semibold text-gray-800">{review.name}</span>
-                  <span>{review.date}</span>
-                </div>
-              </div>
-            ))}
+          <div className="space-y-8">
+            <div className="relative">
+              {/* Gradient overlays for smooth fade effect */}
+              <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-amber-50 to-transparent z-10 pointer-events-none"></div>
+              <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-amber-50 to-transparent z-10 pointer-events-none"></div>
+              
+              <Marquee direction="left" className="py-4" speed={30}>
+              {[
+                {
+                  name: "Ana M.",
+                  avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=ana",
+                  rating: 5,
+                  review: "Simplesmente maravilhoso! O melhor brunch que já tive em Lisboa. Tudo fresco e delicioso.",
+                  date: "Março 2024",
+                },
+                {
+                  name: "João F.",
+                  avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=joao",
+                  rating: 5,
+                  review: "Ambiente acolhedor e staff super simpático. Recomendo vivamente a avocado toast!",
+                  date: "Fevereiro 2024",
+                },
+                {
+                  name: "Carla R.",
+                  avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=carla",
+                  rating: 5,
+                  review: "As panquecas são divinais e o café é top. Voltarei sempre que puder!",
+                  date: "Janeiro 2024",
+                },
+                {
+                  name: "Miguel T.",
+                  avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=miguel",
+                  rating: 5,
+                  review: "Local perfeito para começar o dia. Experiência inesquecível!",
+                  date: "Dezembro 2023",
+                },
+                {
+                  name: "Sara L.",
+                  avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=sara",
+                  rating: 5,
+                  review: "Melhor pequeno-almoço da cidade. A qualidade é excecional e o serviço impecável.",
+                  date: "Novembro 2023",
+                },
+                {
+                  name: "Pedro A.",
+                  avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=pedro",
+                  rating: 5,
+                  review: "Espaço bonito, staff simpático e comida deliciosa. Nota máxima!",
+                  date: "Outubro 2023",
+                },
+                {
+                  name: "Maria S.",
+                  avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=maria",
+                  rating: 5,
+                  review: "Café excecional e ambiente único. Definitivamente o meu local favorito!",
+                  date: "Setembro 2023",
+                },
+                {
+                  name: "Ricardo P.",
+                  avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=ricardo",
+                  rating: 5,
+                  review: "Serviço impecável e comida de qualidade superior. Recomendo a 100%!",
+                  date: "Agosto 2023",
+                },
+              ].map((review, index) => (
+                <ReviewCard
+                  key={index}
+                  avatar={review.avatar}
+                  name={review.name}
+                  rating={review.rating}
+                  review={review.review}
+                  date={review.date}
+                />
+              ))}
+              </Marquee>
+            </div>
           </div>
         </div>
       </section>
@@ -345,6 +381,21 @@ export default function page() {
           }
         }
         
+        @keyframes fade-in-up-delayed {
+          0% {
+            opacity: 0;
+            transform: translateY(50px) scale(0.95);
+          }
+          50% {
+            opacity: 0.5;
+            transform: translateY(25px) scale(0.98);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+        
         @keyframes float {
           0%, 100% {
             transform: translateY(0px) rotate(0deg);
@@ -374,6 +425,10 @@ export default function page() {
         
         .animate-fade-in-up {
           animation: fade-in-up 1s ease-out;
+        }
+        
+        .animate-fade-in-up-delayed {
+          animation: fade-in-up-delayed 1.5s ease-out;
         }
         
         .animate-float {
