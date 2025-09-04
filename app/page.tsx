@@ -76,80 +76,68 @@ export default function page() {
         
         <div 
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer hover:scale-110 transition-transform"
-          onClick={() => scrollToSection('menu')}
+          onClick={() => scrollToSection('reviews')}
         >
           <ChevronDown />
         </div>
       </section>
 
-      {/* Menu Section */}
-      <section id="menu" className="py-20 bg-white/80 backdrop-blur-sm">
+      {/* Reviews Section */}
+      <section id="reviews" className="py-20 bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h3 className="text-5xl font-bold text-gray-800 mb-4">
-              Especialidades da Casa
+              O que dizem os nossos clientes ⭐⭐⭐⭐⭐
             </h3>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Cada prato é uma obra de arte culinária, preparada com ingredientes frescos e muito amor
+              Testemunhos reais do TripAdvisor, só as melhores experiências.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
-                name: "Brunch Imperial",
-                description: "Ovos benedictinos, salmão fumado, avocado toast e fruta fresca",
-                price: "€18.50",
-                image: "🍳"
+                name: "Ana M.",
+                comment: "Simplesmente maravilhoso! O melhor brunch que já tive em Lisboa. Tudo fresco e delicioso.",
+                date: "Março 2024",
               },
               {
-                name: "Pancakes dos Sonhos",
-                description: "Stack de pancakes com frutos vermelhos, xarope de ácer e chantilly",
-                price: "€12.90",
-                image: "🥞"
+                name: "João F.",
+                comment: "Ambiente acolhedor e staff super simpático. Recomendo vivamente a avocado toast!",
+                date: "Fevereiro 2024",
               },
               {
-                name: "Açaí Bowl Premium",
-                description: "Bowl de açaí com granola caseira, banana, coco e sementes",
-                price: "€9.50",
-                image: "🍓"
+                name: "Carla R.",
+                comment: "As panquecas são divinais e o café é top. Voltarei sempre que puder!",
+                date: "Janeiro 2024",
               },
               {
-                name: "Avocado Toast Gourmet",
-                description: "Pão artesanal com abacate, tomate cherry e queijo feta",
-                price: "€8.90",
-                image: "🥑"
+                name: "Miguel T.",
+                comment: "Local perfeito para começar o dia. Experiência inesquecível!",
+                date: "Dezembro 2023",
               },
               {
-                name: "French Toast Deluxe",
-                description: "Rabanada francesa com canela, mel e frutos secos",
-                price: "€10.50",
-                image: "🍞"
+                name: "Sara L.",
+                comment: "Melhor pequeno-almoço da cidade. A qualidade é excecional e o serviço impecável.",
+                date: "Novembro 2023",
               },
               {
-                name: "Smoothie Bowl Tropical",
-                description: "Bowl de manga e maracujá com toppings crocantes",
-                price: "€7.90",
-                image: "🥭"
-              }
-            ].map((item, index) => (
+                name: "Pedro A.",
+                comment: "Espaço bonito, staff simpático e comida deliciosa. Nota máxima!",
+                date: "Outubro 2023",
+              },
+            ].map((review, index) => (
               <div
                 key={index}
-                className="bg-white rounded-3xl p-8 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-500 group"
+                className="bg-white rounded-3xl p-8 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-500"
               >
-                <div className="text-6xl mb-4 text-center group-hover:scale-110 transition-transform duration-300">
-                  {item.image}
+                <div className="flex items-center mb-4 space-x-2">
+                  <span className="text-amber-600 text-lg">⭐️⭐️⭐️⭐️⭐️</span>
                 </div>
-                <h4 className="text-2xl font-bold text-gray-800 mb-3 text-center">
-                  {item.name}
-                </h4>
-                <p className="text-gray-600 mb-4 text-center leading-relaxed">
-                  {item.description}
-                </p>
-                <div className="text-center">
-                  <span className="text-3xl font-bold text-amber-600">
-                    {item.price}
-                  </span>
+                <p className="text-gray-700 italic mb-4 leading-relaxed">“{review.comment}”</p>
+                <div className="text-sm text-gray-500 flex justify-between items-center">
+                  <span className="font-semibold text-gray-800">{review.name}</span>
+                  <span>{review.date}</span>
                 </div>
               </div>
             ))}
