@@ -31,7 +31,7 @@ export default function page() {
         <div className="container mx-auto px-6 text-center z-10">
           <div className="animate-fade-in-up">
             <h2 className="text-7xl md:text-8xl font-black mb-6 bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 bg-clip-text text-transparent leading-tight">
-              Desperta os
+              Choupana Caffe
               <br />
               <span className="relative">
                 Sentidos
@@ -40,7 +40,7 @@ export default function page() {
             </h2>
             
             <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Descobre o paraíso do pequeno-almoço e brunch na <span className="font-semibold text-amber-700">Choupana Caffee</span>. 
+              Descobre o paraíso do pequeno-almoço e brunch na <span className="font-semibold text-amber-700">Choupana Caffe</span>. 
               Sabores únicos que transformam cada manhã numa experiência inesquecível.
             </p>
             
@@ -155,7 +155,7 @@ export default function page() {
               </h3>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Nascemos da paixão por criar momentos especiais através da gastronomia. 
-                Na Choupana Caffee, cada receita conta uma história, cada ingrediente é 
+                Na Choupana Caffe, cada receita conta uma história, cada ingrediente é 
                 escolhido a dedo, e cada cliente é tratado como família.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">

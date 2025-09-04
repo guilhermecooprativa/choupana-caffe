@@ -71,7 +71,7 @@ export default function Footer() {
       <footer className="bg-black text-white py-8">
         <div className="container mx-auto px-6 text-center">
           <p className="text-gray-400">
-            © 2024 Choupana Caffee. Todos os direitos reservados. Feito com ❤️ em Lisboa.
+            © 2024 Choupana Caffe. Todos os direitos reservados. Desenvolvido por cooprativa.pt.
           </p>
         </div>
       </footer>

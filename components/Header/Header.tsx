@@ -29,7 +29,7 @@ export default function Header() {
             <span className="text-white text-xl">☕</span>
           </div>
           <h1 className="text-2xl font-bold bg-gradient-to-r from-amber-700 to-orange-800 bg-clip-text text-transparent">
-            Choupana Caffee
+            Choupana Caffe
           </h1>
         </div>
         
