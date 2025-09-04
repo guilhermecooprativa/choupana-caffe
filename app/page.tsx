@@ -1,8 +1,8 @@
 "use client";
 
 import React from 'react';
-import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 
 export default function page() {
   const scrollToSection = (sectionId: string) => {
