@@ -31,7 +31,7 @@ const ReviewCard = ({ avatar, name, rating, review, date }: ReviewCardProps) => 
         </div>
       </div>
     </div>
-    <p className="text-gray-700 text-sm leading-relaxed mb-3">"{review}"</p>
+    <p className="text-gray-700 text-sm leading-relaxed mb-3">&ldquo;{review}&rdquo;</p>
     {date && (
       <div className="text-xs text-gray-500 text-right">{date}</div>
     )}
