@@ -50,7 +50,7 @@ export default function Header() {
 
   return (
     <>
-      <nav className={`fixed w-full z-50 transition-all duration-500 ${
+      <nav className={`fixed w-full z-40 transition-all duration-500 ${
         isScrolled 
           ? 'bg-white/95 backdrop-blur-lg shadow-xl py-2' 
           : 'bg-transparent py-4'
@@ -64,7 +64,7 @@ export default function Header() {
             <div className="w-12 h-12 bg-gradient-to-br from-amber-600 to-orange-700 rounded-full flex items-center justify-center transform rotate-12 group-hover:rotate-0 transition-all duration-300 group-hover:scale-110">
               <span className="text-white text-xl">☕</span>
             </div>
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-amber-700 to-orange-800 bg-clip-text text-transparent group-hover:from-amber-600 group-hover:to-orange-600 transition-all duration-300">
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-pink-600 to-purple-700 bg-clip-text text-transparent group-hover:from-pink-500 group-hover:to-purple-600 transition-all duration-300">
               Choupana Caffe
             </h1>
           </div>
@@ -77,15 +77,15 @@ export default function Header() {
                 onClick={() => scrollToSection(item.id)}
                 className={`relative px-4 py-2 rounded-full font-medium transition-all duration-300 group ${
                   activeSection === item.id
-                    ? 'text-amber-600 bg-amber-50'
-                    : 'text-gray-700 hover:text-amber-600 hover:bg-amber-50'
+                    ? 'text-pink-600 bg-pink-50'
+                    : 'text-gray-700 hover:text-pink-600 hover:bg-pink-50'
                 }`}
               >
                 <span className="flex items-center space-x-2">
                   <span className="text-sm">{item.icon}</span>
                   <span>{item.name}</span>
                 </span>
-                <span className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-amber-600 group-hover:w-3/4 transition-all duration-300 ${
+                <span className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-pink-600 group-hover:w-3/4 transition-all duration-300 ${
                   activeSection === item.id ? 'w-3/4' : ''
                 }`}></span>
               </button>
@@ -96,7 +96,7 @@ export default function Header() {
           <div className="hidden md:block">
             <button 
               onClick={() => scrollToSection('contacto')}
-              className="bg-gradient-to-r from-amber-600 to-orange-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg hover:scale-105 transform transition-all duration-300"
+              className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg hover:scale-105 transform transition-all duration-300"
             >
               Reservar Mesa
             </button>
@@ -125,7 +125,7 @@ export default function Header() {
       </nav>
 
       {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 z-40 md:hidden transition-all duration-300 ${
+      <div className={`fixed inset-0 z-50 md:hidden transition-all duration-300 ${
         isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
       }`}>
         <div 
@@ -155,8 +155,8 @@ export default function Header() {
                   onClick={() => scrollToSection(item.id)}
                   className={`w-full flex items-center space-x-3 px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
                     activeSection === item.id
-                      ? 'text-amber-600 bg-amber-50'
-                      : 'text-gray-700 hover:text-amber-600 hover:bg-amber-50'
+                      ? 'text-pink-600 bg-pink-50'
+                      : 'text-gray-700 hover:text-pink-600 hover:bg-pink-50'
                   }`}
                 >
                   <span className="text-lg">{item.icon}</span>
@@ -169,7 +169,7 @@ export default function Header() {
             <div className="mt-8 pt-6 border-t border-gray-200">
               <button 
                 onClick={() => scrollToSection('contacto')}
-                className="w-full bg-gradient-to-r from-amber-600 to-orange-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transform transition-all duration-300"
+                className="w-full bg-gradient-to-r from-pink-600 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transform transition-all duration-300"
               >
                 Reservar Mesa
               </button>

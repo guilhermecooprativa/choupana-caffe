@@ -19,17 +19,17 @@ export default function Footer() {
   return (
     <>
       {/* Contact Section */}
-      <section id="contacto" className="py-20 bg-gradient-to-br from-gray-900 via-amber-900 to-orange-900 text-white relative overflow-hidden">
+      <section id="contacto" className="py-20 bg-gradient-to-br from-gray-900 via-pink-900 to-purple-900 text-white relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-32 h-32 bg-amber-300 rounded-full animate-pulse"></div>
-          <div className="absolute top-40 right-32 w-24 h-24 bg-orange-300 rounded-full animate-bounce"></div>
-          <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-red-300 rounded-full animate-ping"></div>
+          <div className="absolute top-20 left-20 w-32 h-32 bg-pink-300 rounded-full animate-pulse"></div>
+          <div className="absolute top-40 right-32 w-24 h-24 bg-purple-300 rounded-full animate-bounce"></div>
+          <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-indigo-300 rounded-full animate-ping"></div>
         </div>
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <h3 className="text-5xl font-bold mb-4 bg-gradient-to-r from-amber-300 to-orange-300 bg-clip-text text-transparent">
+            <h3 className="text-5xl font-bold mb-4 bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text text-transparent">
               Visita-nos Hoje!
             </h3>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -40,38 +40,43 @@ export default function Footer() {
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Contact Info */}
             <div className="space-y-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mx-auto group hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto group hover:scale-110 transition-transform duration-300">
                 <span className="text-2xl text-white">📍</span>
               </div>
               <h4 className="text-xl font-semibold text-center">Localização</h4>
               <p className="text-gray-300 text-center">
                 Rua das Delícias, 123<br />
                 1200-001 Lisboa<br />
-                <span className="text-amber-300 text-sm">Próximo ao Metro Marquês de Pombal</span>
+                <span className="text-pink-300 text-sm">Próximo ao Metro Marquês de Pombal</span>
               </p>
             </div>
             
             <div className="space-y-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mx-auto group hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto group hover:scale-110 transition-transform duration-300">
                 <span className="text-2xl text-white">🕐</span>
               </div>
-              <h4 className="text-xl font-semibold text-center">Horário</h4>
+              <h4 className="text-xl font-semibold text-center">Opening hours</h4>
               <div className="text-gray-300 text-center space-y-1">
-                <p>Segunda a Domingo</p>
-                <p className="text-amber-300 font-semibold">7:00 - 15:00</p>
-                <p className="text-sm text-gray-400">Última encomenda: 14:30</p>
+                <p className="font-semibold">Mon-Tues</p>
+                <p className="text-pink-300 font-semibold">Closed</p>
+                <p className="font-semibold">Wed – Thu</p>
+                <p className="text-pink-300 font-semibold">10:00AM – 8:30PM</p>
+                <p className="font-semibold">Fri – Sat</p>
+                <p className="text-pink-300 font-semibold">10:00AM – 9:00PM</p>
+                <p className="font-semibold">Sun</p>
+                <p className="text-pink-300 font-semibold">10:00AM – 8:00PM</p>
               </div>
             </div>
             
             <div className="space-y-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mx-auto group hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto group hover:scale-110 transition-transform duration-300">
                 <span className="text-2xl text-white">📞</span>
               </div>
               <h4 className="text-xl font-semibold text-center">Contacto</h4>
               <div className="text-gray-300 text-center space-y-2">
-                <p>+351 21 123 4567</p>
+                <p>(351) 21 123 4567</p>
                 <p>info@choupanacaffee.pt</p>
-                <button className="text-amber-300 hover:text-amber-200 text-sm underline">
+                <button className="text-pink-300 hover:text-pink-200 text-sm underline">
                   Reservar Mesa
                 </button>
               </div>
@@ -79,7 +84,7 @@ export default function Footer() {
 
             {/* Newsletter */}
             <div className="space-y-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mx-auto group hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto group hover:scale-110 transition-transform duration-300">
                 <span className="text-2xl text-white">📧</span>
               </div>
               <h4 className="text-xl font-semibold text-center">Newsletter</h4>
@@ -136,7 +141,7 @@ export default function Footer() {
                     <button
                       key={link}
                       onClick={() => scrollToSection(link.toLowerCase())}
-                      className="text-gray-300 hover:text-amber-300 transition-colors duration-300 text-sm"
+                      className="text-gray-300 hover:text-pink-300 transition-colors duration-300 text-sm"
                     >
                       {link}
                     </button>
@@ -173,7 +178,7 @@ export default function Footer() {
                 © 2024 Choupana Caffe. Todos os direitos reservados.
               </p>
               <p className="text-gray-500 text-xs mt-1">
-                Desenvolvido por <span className="text-amber-400">cooprativa.pt</span>
+                Desenvolvido por <span className="text-pink-400">cooprativa.pt</span>
               </p>
             </div>
 
