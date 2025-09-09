@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 
-export default function page() {
+export default function Page() {
   useEffect(() => {
     const handleScroll = () => {
       // Obter elementos das imagens
