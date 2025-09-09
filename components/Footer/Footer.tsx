@@ -1,10 +1,12 @@
 
-// @ts-nocheck
 "use client";
 
+import React from 'react';
 import SocialButton from '../SocialButton';
 
 export default function Footer() {
+  // Use a static year to avoid hydration mismatch
+  const currentYear = 2024;
   return (
     <footer className="bg-black text-white">
       <div className="container mx-auto px-6 py-10">
@@ -47,7 +49,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-10 border-t border-white/10 pt-6 flex flex-col items-center justify-center gap-3 text-center">
-          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Choupana Caffe. Todos os direitos reservados.</p>
+          <p className="text-gray-400 text-sm">© {currentYear} Choupana Caffe. Todos os direitos reservados.</p>
           <p className="text-gray-500 text-sm">
             Desenvolvido por <a href="https://cooprativa.pt" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300">cooprativa.pt</a>
           </p>
